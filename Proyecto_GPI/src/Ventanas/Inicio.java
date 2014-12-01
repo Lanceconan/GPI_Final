@@ -220,6 +220,19 @@ public class Inicio extends javax.swing.JFrame {
 
     private void encuestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_encuestaActionPerformed
         // TODO add your handling code here:
+        Encuesta ventana = new Encuesta();
+        //setVisible(false);
+        this.dispose();
+        Encuesta.setDefaultLookAndFeelDecorated(true);
+        ventana.setVisible(true);
+        ventana.setResizable(false);
+        ventana.setLocationRelativeTo(null);
+        ventana.setDefaultCloseOperation(Encuesta.DO_NOTHING_ON_CLOSE);
+        ventana.setTitle("Encuesta | Postulante");
+        Image icono;
+        icono = Toolkit.getDefaultToolkit().getImage("src/Imagenes/rol.png");
+        ventana.setIconImage(icono);
+        ventana.getRootPane().setFont(UIManager.getFont("SystemFont")); 
                
     }//GEN-LAST:event_encuestaActionPerformed
 
@@ -273,13 +286,13 @@ public class Inicio extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            Inicio ventana = new Inicio();
-            ventana.setVisible(true);
-            ventana.setLocationRelativeTo(null);
+            Inicio inicio = new Inicio();
+            inicio.setVisible(true);
+            inicio.setLocationRelativeTo(null);
             Image icono;
             icono = Toolkit.getDefaultToolkit().getImage("src/Imagenes/rol.png");
-            ventana.setIconImage(icono);
-            ventana.getRootPane().setFont(UIManager.getFont("SystemFont"));
+            inicio.setIconImage(icono);
+            inicio.getRootPane().setFont(UIManager.getFont("SystemFont"));
         });
     }
 
