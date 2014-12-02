@@ -228,7 +228,6 @@ public class Inicio extends javax.swing.JFrame {
     private void encuestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_encuestaActionPerformed
         // TODO add your handling code here:
         Encuesta ventana = new Encuesta();
-        //setVisible(false);
         this.dispose();
         Encuesta.setDefaultLookAndFeelDecorated(true);
         ventana.setVisible(true);
@@ -249,6 +248,18 @@ public class Inicio extends javax.swing.JFrame {
 
     private void rolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rolActionPerformed
         // TODO add your handling code here:
+        Roles ventana = new Roles();
+        this.dispose();
+        Roles.setDefaultLookAndFeelDecorated(true);
+        ventana.setVisible(true);
+        ventana.setResizable(false);
+        ventana.setLocationRelativeTo(null);
+        ventana.setDefaultCloseOperation(Roles.DO_NOTHING_ON_CLOSE);
+        ventana.setTitle("Roles | Empresa");
+        Image icono;
+        icono = Toolkit.getDefaultToolkit().getImage("src/Imagenes/rol.png");
+        ventana.setIconImage(icono);
+        ventana.getRootPane().setFont(UIManager.getFont("SystemFont")); 
     }//GEN-LAST:event_rolActionPerformed
 
     private void creditoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creditoActionPerformed
