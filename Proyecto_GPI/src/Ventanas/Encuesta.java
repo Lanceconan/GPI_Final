@@ -8,6 +8,7 @@ package Ventanas;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import javax.swing.Icon;
 import javax.swing.UIManager;
 
 /**
@@ -16,6 +17,7 @@ import javax.swing.UIManager;
  */
 public class Encuesta extends javax.swing.JFrame {
 public static int Referencia = 0;
+public static int PuntosAcumuladosParciales = 0;
 public static int PuntosAcumulados = 0;
     /**
      * Creates new form Encuesta01
@@ -49,7 +51,12 @@ public static int PuntosAcumulados = 0;
         next = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         parar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        cancelar = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(358, 18));
@@ -60,39 +67,51 @@ public static int PuntosAcumulados = 0;
 
         p1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         p1.setText("1. ¿Cuánta experiencia cree tener en su área de trabajo?");
-        p1.setMaximumSize(new java.awt.Dimension(433, 64));
-        p1.setMinimumSize(new java.awt.Dimension(358, 18));
-        p1.setName("[358, 18]"); // NOI18N
+        p1.setAlignmentX(0.5F);
+        p1.setAutoscrolls(true);
+        p1.setMaximumSize(new java.awt.Dimension(500, 68));
+        p1.setMinimumSize(new java.awt.Dimension(500, 68));
+        p1.setName(""); // NOI18N
 
         p6.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         p6.setText("6. ¿Qué nivel de aprendizaje cree que usted tiene?");
-        p6.setMaximumSize(new java.awt.Dimension(358, 18));
-        p6.setMinimumSize(new java.awt.Dimension(358, 18));
-        p6.setName("[358, 18]"); // NOI18N
+        p6.setAlignmentX(0.5F);
+        p6.setAutoscrolls(true);
+        p6.setMaximumSize(new java.awt.Dimension(500, 68));
+        p6.setMinimumSize(new java.awt.Dimension(500, 68));
+        p6.setName(""); // NOI18N
 
         p2.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         p2.setText("2. ¿Cuanto ha tratado de mejorar en su área de trabajo?");
-        p2.setMaximumSize(new java.awt.Dimension(358, 18));
-        p2.setMinimumSize(new java.awt.Dimension(358, 18));
-        p2.setName("[358, 18]"); // NOI18N
+        p2.setAlignmentX(0.5F);
+        p2.setAutoscrolls(true);
+        p2.setMaximumSize(new java.awt.Dimension(500, 68));
+        p2.setMinimumSize(new java.awt.Dimension(500, 68));
+        p2.setName(""); // NOI18N
 
         p3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         p3.setText("3. ¿Tiene grandes ganas de trabajar, le entusiasma lo que hace?");
-        p3.setMaximumSize(new java.awt.Dimension(358, 18));
-        p3.setMinimumSize(new java.awt.Dimension(358, 18));
-        p3.setName("[358, 18]"); // NOI18N
+        p3.setAlignmentX(0.5F);
+        p3.setAutoscrolls(true);
+        p3.setMaximumSize(new java.awt.Dimension(500, 68));
+        p3.setMinimumSize(new java.awt.Dimension(500, 68));
+        p3.setName(""); // NOI18N
 
         p4.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         p4.setText("4. ¿Que tanto se adapta al ritmo de la empresa?");
-        p4.setMaximumSize(new java.awt.Dimension(358, 18));
-        p4.setMinimumSize(new java.awt.Dimension(358, 18));
-        p4.setName("[358, 18]"); // NOI18N
+        p4.setAlignmentX(0.5F);
+        p4.setAutoscrolls(true);
+        p4.setMaximumSize(new java.awt.Dimension(500, 68));
+        p4.setMinimumSize(new java.awt.Dimension(500, 68));
+        p4.setName(""); // NOI18N
 
         p5.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         p5.setText("5. ¿Qué tan empático se considera?");
-        p5.setMaximumSize(new java.awt.Dimension(358, 18));
-        p5.setMinimumSize(new java.awt.Dimension(358, 18));
-        p5.setName("[358, 18]"); // NOI18N
+        p5.setAlignmentX(0.5F);
+        p5.setAutoscrolls(true);
+        p5.setMaximumSize(new java.awt.Dimension(500, 68));
+        p5.setMinimumSize(new java.awt.Dimension(500, 68));
+        p5.setName(""); // NOI18N
 
         Pregunta1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10" }));
         Pregunta1.addActionListener(new java.awt.event.ActionListener() {
@@ -155,84 +174,113 @@ public static int PuntosAcumulados = 0;
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
-        jLabel1.setText("Cancelar Encuesta");
+        cancelar.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        cancelar.setText("Cancelar Encuesta");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(tituloencuesta)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(parar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(27, 742, Short.MAX_VALUE)
+                                .addComponent(parar, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(tituloencuesta)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cancelar)))
+                        .addGap(20, 20, 20))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(p3, javax.swing.GroupLayout.DEFAULT_SIZE, 433, Short.MAX_VALUE)
-                            .addComponent(p4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(p2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(p6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(p5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(p1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(p5, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Pregunta5, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(p1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Pregunta3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(p2, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Pregunta1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(p3, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Pregunta2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(p4, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(p6, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Pregunta4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(Pregunta6, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Pregunta1, 0, 83, Short.MAX_VALUE)
-                            .addComponent(Pregunta2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Pregunta3, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Pregunta5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Pregunta6, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Pregunta4, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(next, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(20, Short.MAX_VALUE))
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(12, 12, 12))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(tituloencuesta)
-                .addGap(54, 54, 54)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(p1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Pregunta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(p2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Pregunta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(p3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Pregunta3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(p2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Pregunta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(p3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Pregunta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(p4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Pregunta4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(p5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Pregunta5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(p6, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Pregunta6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGap(22, 22, 22))
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addGap(16, 16, 16)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cancelar)
+                    .addComponent(tituloencuesta))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(parar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addComponent(next)
-                .addGap(22, 22, 22))
+                .addGap(34, 34, 34))
         );
 
         pack();
@@ -264,17 +312,23 @@ public static int PuntosAcumulados = 0;
 
     private void nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextActionPerformed
         // TODO add your handling code here:
-        Referencia++;
-        PuntosAcumulados = PuntosAcumulados 
+        
+        
+        if (Referencia == 0){
+        PuntosAcumuladosParciales = PuntosAcumuladosParciales 
         + (Integer.parseInt((String)Pregunta1.getSelectedItem())
         + Integer.parseInt((String)Pregunta2.getSelectedItem())
         + Integer.parseInt((String)Pregunta3.getSelectedItem())
         + Integer.parseInt((String)Pregunta4.getSelectedItem())
         + Integer.parseInt((String)Pregunta5.getSelectedItem())
-        + Integer.parseInt((String)Pregunta6.getSelectedItem()));
-        System.out.println("Hola "+ PuntosAcumulados);
+        + Integer.parseInt((String)Pregunta6.getSelectedItem())); 
+        System.out.println("Parcial1 Competencias" + PuntosAcumuladosParciales);
+        }        
+        
+        Referencia++;
+        
         /*Competencias*/        
-        if (Referencia == 1){
+        if (Referencia == 1){            
             tituloencuesta.setText("Competencias del Postulante");
             p1.setText("<html><center>7. ¿Qué nivel de adaptación al ambiente laboral posee?</center></html>");
             p2.setText("<html><center>8. ¿Qué tan líder usted podría ser?</center></html>");
@@ -287,15 +341,306 @@ public static int PuntosAcumulados = 0;
             Pregunta3.setSelectedIndex(0);
             Pregunta4.setSelectedIndex(0);
             Pregunta5.setSelectedIndex(0);
+            Pregunta6.setSelectedIndex(0); 
+        }
+        
+        /*Habilidades*/        
+        if (Referencia == 2){           
+            
+            PuntosAcumuladosParciales = PuntosAcumuladosParciales 
+            + (Integer.parseInt((String)Pregunta1.getSelectedItem())
+            + Integer.parseInt((String)Pregunta2.getSelectedItem())
+            + Integer.parseInt((String)Pregunta3.getSelectedItem())
+            + Integer.parseInt((String)Pregunta4.getSelectedItem())
+            + Integer.parseInt((String)Pregunta5.getSelectedItem())
+            + Integer.parseInt((String)Pregunta6.getSelectedItem()));    
+            System.out.println("Parcial2 Competencias " + PuntosAcumuladosParciales);
+            PuntosAcumulados = PuntosAcumulados + (PuntosAcumuladosParciales*3);            
+            System.out.println("Competencias "+ PuntosAcumulados);
+                                            
+            tituloencuesta.setText("Habilidades del Postulante");
+            p1.setText("<html><center>1. ¿Qué tanto aporte siente usted que realiza <br> en un equipo de trabajo?</center></html>");
+            p2.setText("<html><center>2. ¿Qué tan hábil se siente para ser un líder <br> de trabajo?</center></html>");
+            p3.setText("<html><center>3. ¿Qué tanto respeta las opiniones de los otros?</center></html>");
+            p4.setText("<html><center>4. ¿Qué tan hábil es usted para no depender <br> de nadie en su trabajo?</center></html>");
+            p5.setText("<html><center>5. ¿Qué tan efectivo se considera para convencer <br> a sus superiores?</center></html>");
+            p6.setText("<html><center>6. ¿Qué tan autosuficiente se considera?</center></html>");
+            Pregunta1.setSelectedIndex(0);
+            Pregunta2.setSelectedIndex(0);
+            Pregunta3.setSelectedIndex(0);
+            Pregunta4.setSelectedIndex(0);
+            Pregunta5.setSelectedIndex(0);
             Pregunta6.setSelectedIndex(0);
         }
         
+        /*Habilidades*/        
+        if (Referencia == 3){                   
+            PuntosAcumuladosParciales = 0;
+            PuntosAcumuladosParciales = PuntosAcumuladosParciales 
+            + (Integer.parseInt((String)Pregunta1.getSelectedItem())
+            + Integer.parseInt((String)Pregunta2.getSelectedItem())
+            + Integer.parseInt((String)Pregunta3.getSelectedItem())
+            + Integer.parseInt((String)Pregunta4.getSelectedItem())
+            + Integer.parseInt((String)Pregunta5.getSelectedItem())
+            + Integer.parseInt((String)Pregunta6.getSelectedItem()));
+            System.out.println("Parcial Habilidad "+ PuntosAcumuladosParciales);
+            
+            tituloencuesta.setText("Habilidades del Postulante");
+            p1.setText("<html><center>7. ¿Qué tan hábil se considera para lograr escalar <br> en la empresa?</center></html>");
+            p2.setText("<html><center>8. ¿Qué nivel de autocontrol tiene?</center></html>");
+            p3.setText("<html><center>9. ¿Qué tan persuasivo se considera?</center></html>");
+            p4.setText("<html><center>10. ¿Qué tan creativo se considera?</center></html>");
+            p5.setText("<html><center>11. ¿Qué nivel de manejo tiene con la tecnología <br> (software, hardware, etc.)?</center></html>");
+            p6.setText("<html><center>12. ¿Considera que tiene habilidades para resolver <br> problemas?</center></html>");
+            Pregunta1.setSelectedIndex(0);
+            Pregunta2.setSelectedIndex(0);
+            Pregunta3.setSelectedIndex(0);
+            Pregunta4.setSelectedIndex(0);
+            Pregunta5.setSelectedIndex(0);
+            Pregunta6.setSelectedIndex(0);
+            
+        }
+        
+        /*Necesidades*/        
+        if (Referencia == 4){            
+            
+            PuntosAcumuladosParciales = PuntosAcumuladosParciales 
+            + (Integer.parseInt((String)Pregunta1.getSelectedItem())
+            + Integer.parseInt((String)Pregunta2.getSelectedItem())
+            + Integer.parseInt((String)Pregunta3.getSelectedItem())
+            + Integer.parseInt((String)Pregunta4.getSelectedItem())
+            + Integer.parseInt((String)Pregunta5.getSelectedItem())
+            + Integer.parseInt((String)Pregunta6.getSelectedItem()));
+            System.out.println("Parcial2 habilidad "+ PuntosAcumuladosParciales);
+            PuntosAcumulados = PuntosAcumulados + (PuntosAcumuladosParciales*2);
+            
+            PuntosAcumuladosParciales = 0;
+            System.out.println("Competencias + Habilidades " + PuntosAcumulados);
+                        
+            tituloencuesta.setText("Necesidades del Postulante");
+            p1.setText("<html><center>1. ¿Qué tan deseoso esta por trabajar acá?</center></html>");
+            p2.setText("<html><center>2. ¿Qué tan motivado se siente?</center></html>");
+            p3.setText("<html><center>3. ¿Qué tan importante es para usted este empleo?</center></html>");
+            p4.setText("<html><center>4. ¿Cree que es bien considerado en la actualidad <br> por la empresa, tanto que consideren siempre sus proposiciones?</center></html>");
+            p5.setText("<html><center>5. ¿Espera siempre recompensas al aportar con ideas <br> a la empresa?</center></html>");
+            p6.setText("<html><center>6. ¿Qué tan deseoso esta por escalar en la empresa?</center></html>");
+            Pregunta1.setSelectedIndex(0);
+            Pregunta2.setSelectedIndex(0);
+            Pregunta3.setSelectedIndex(0);
+            Pregunta4.setSelectedIndex(0);
+            Pregunta5.setSelectedIndex(0);
+            Pregunta6.setSelectedIndex(0);
+        }
+        
+        /*Necesidades*/        
+        if (Referencia == 5){           
+            
+            PuntosAcumuladosParciales = 0;
+            PuntosAcumuladosParciales = PuntosAcumuladosParciales 
+            + (Integer.parseInt((String)Pregunta1.getSelectedItem())
+            + Integer.parseInt((String)Pregunta2.getSelectedItem())
+            + Integer.parseInt((String)Pregunta3.getSelectedItem())
+            + Integer.parseInt((String)Pregunta4.getSelectedItem())
+            + Integer.parseInt((String)Pregunta5.getSelectedItem())
+            + Integer.parseInt((String)Pregunta6.getSelectedItem()));
+            System.out.println("Parcial Necesidades 1 "+ PuntosAcumuladosParciales);
+            
+            tituloencuesta.setText("Necesidades del Postulante");
+            p1.setText("<html><center>7. ¿Qué nivel de importancia tiene para usted el dinero?</center></html>");
+            p2.setText("<html><center>8. ¿Qué nivel de serenidad necesita para lograr <br> su 100% de rendimiento?</center></html>");
+            p3.setText("<html><center>9. ¿Qué tan importante es para usted el <br> reconocimiento en la empresa?</center></html>");
+            p4.setText("<html><center>10. ¿Cuánta confianza necesita para considerarse <br> seguro en su trabajo?</center></html>");
+            p5.setText("<html><center>11. ¿Qué tan sociable se considera en la empresa?</center></html>");
+            p6.setText("<html><center>12. ¿Que tanto busca el constante mejoraramiento?</center></html>");
+            Pregunta1.setSelectedIndex(0);
+            Pregunta2.setSelectedIndex(0);
+            Pregunta3.setSelectedIndex(0);
+            Pregunta4.setSelectedIndex(0);
+            Pregunta5.setSelectedIndex(0);
+            Pregunta6.setSelectedIndex(0);
+            
+        }
+        
+         /*Bibliograficas, Ambientales y Perfil*/        
+        if (Referencia == 6){
+            
+            PuntosAcumuladosParciales = PuntosAcumuladosParciales 
+            + (Integer.parseInt((String)Pregunta1.getSelectedItem())
+            + Integer.parseInt((String)Pregunta2.getSelectedItem())
+            + Integer.parseInt((String)Pregunta3.getSelectedItem())
+            + Integer.parseInt((String)Pregunta4.getSelectedItem())
+            + Integer.parseInt((String)Pregunta5.getSelectedItem())
+            + Integer.parseInt((String)Pregunta6.getSelectedItem()));           
+            System.out.println("Parcial Necesidades 2 "+ PuntosAcumuladosParciales);
+            PuntosAcumulados = PuntosAcumulados + (PuntosAcumuladosParciales*3);
+            
+            System.out.println("Competencias + Habilidades + Necesidades "+ PuntosAcumulados);
+            
+            tituloencuesta.setText("Bibliograficas, Ambientales y Perfil del Postulante");
+            p1.setText("<html><center>1. ¿Qué importancia le da usted a la vida en pareja?</center></html>");
+            p2.setText("<html><center>2. ¿Le gusta como ha vivido su vida?</center></html>");
+            p3.setText("<html><center>1. ¿Cuán consciente está usted de las leyes <br> ambientales del país que aplican a la empresa?</center></html>");
+            p4.setText("<html><center>2. ¿Qué nivel de participación tiene usted <br> en el cuidado ambiental de la empresa?</center></html>");
+            p5.setText("<html><center>1. ¿Necesita que le digan que hacer muy a <br> menudo?</center></html>");
+            p6.setText("<html><center>2. ¿Qué nivel de importancia tiene el logro <br> de objetivos para usted?</center></html>");
+            Pregunta1.setSelectedIndex(0);
+            Pregunta2.setSelectedIndex(0);
+            Pregunta3.setSelectedIndex(0);
+            Pregunta4.setSelectedIndex(0);
+            Pregunta5.setSelectedIndex(0);
+            Pregunta6.setSelectedIndex(0);
+            next.setText("Ver Resultados");
+            next.setIcon(null);
+            parar.setVisible(false);
+            cancelar.setVisible(false);
+            jLabel8.setVisible(false);
+        }
+        /*Condicion de Resultado*/
+        if (Referencia == 7){             
+            
+            PuntosAcumuladosParciales = 0;
+            PuntosAcumuladosParciales = PuntosAcumuladosParciales 
+            + ((Integer.parseInt((String)Pregunta1.getSelectedItem()) + Integer.parseInt((String)Pregunta2.getSelectedItem())) * 1)
+            + ((Integer.parseInt((String)Pregunta3.getSelectedItem()) + Integer.parseInt((String)Pregunta4.getSelectedItem())) * 2)
+            + ((Integer.parseInt((String)Pregunta5.getSelectedItem()) + Integer.parseInt((String)Pregunta6.getSelectedItem())) * 3);           
+            System.out.println("Parcial perfil biblio ambiente "+ PuntosAcumuladosParciales);
+            
+            PuntosAcumulados = PuntosAcumulados + PuntosAcumuladosParciales;            
+            System.out.println("Puntaje Final "+ PuntosAcumulados);
+            
+            /*Seccion de Seleccion de Rol*/
+            tituloencuesta.setText("Resultados de la Encuesta");
+            Pregunta1.setVisible(false);
+            Pregunta2.setVisible(false);
+            Pregunta3.setVisible(false);
+            Pregunta4.setVisible(false);
+            Pregunta5.setVisible(false);
+            Pregunta6.setVisible(false);
+            next.setText("Volver al Menú");       
+            
+            if(PuntosAcumulados >= 108 && PuntosAcumulados <= 215){
+                System.out.println("Auxiliar de Aseo ");
+            }
+            
+            else if(PuntosAcumulados >= 216 && PuntosAcumulados <= 323){
+                System.out.println("Reponedor ");
+            
+            }
+            
+            else if(PuntosAcumulados >= 324 && PuntosAcumulados <= 431){
+                System.out.println("Guardia ");
+            
+            }
+            
+            else if(PuntosAcumulados >= 432 && PuntosAcumulados <= 539){
+                System.out.println("Operador de Maquinas ");
+            
+            }
+            
+            else if(PuntosAcumulados >= 540 && PuntosAcumulados <= 647){
+                System.out.println("Secretaria ");
+            
+            }
+            
+            else if(PuntosAcumulados >= 648 && PuntosAcumulados <= 755){
+                System.out.println("Vendedor ");
+            
+            }
+            
+            else if(PuntosAcumulados >= 756 && PuntosAcumulados <= 791){
+                System.out.println("Encargado de Seguridad ");
+            
+            }
+            
+            else if(PuntosAcumulados >= 792 && PuntosAcumulados <= 827){
+                System.out.println("Encargado de Maquinas ");
+            
+            }
+            
+            else if(PuntosAcumulados >= 828 && PuntosAcumulados <= 863){
+                System.out.println("Encargado de Personal ");
+            
+            }
+            
+            else if(PuntosAcumulados >= 864 && PuntosAcumulados <= 899){
+                System.out.println("Coordinador ");
+            
+            }
+            
+            else if(PuntosAcumulados >= 900 && PuntosAcumulados <= 935){
+                System.out.println("Encargado de Local ");
+            
+            }
+            
+            else if(PuntosAcumulados >= 936 && PuntosAcumulados <= 971){
+                System.out.println("Auditoria ");
+            
+            }
+            
+            else if(PuntosAcumulados >= 972 && PuntosAcumulados <= 989){
+                System.out.println("Gerente de Fiscalia ");
+            
+            }
+            
+            else if(PuntosAcumulados >= 990 && PuntosAcumulados <= 1007){
+                System.out.println("Gerente de Marketing ");
+            
+            }
+            
+            else if(PuntosAcumulados >= 1008 && PuntosAcumulados <= 1025){
+                System.out.println("Gerente de RRHH ");
+            
+            }
+            
+            else if(PuntosAcumulados >= 1026 && PuntosAcumulados <= 1043){
+                System.out.println("Gerente de Operaciones ");
+            
+            }
+            
+            else if(PuntosAcumulados >= 1044 && PuntosAcumulados <= 1061){
+                System.out.println("Gerente de Finanzas ");
+            
+            }
+            
+             else if(PuntosAcumulados >= 1062 && PuntosAcumulados <= 1080){
+                System.out.println("Gerente General ");
+            
+            }
+            
+            /*FIN Seccion de Seleccion de Rol*/ 
+            
+            p1.setText("<html><center></center></html>");
+            p2.setText("<html><center></center></html>");
+            p3.setText("<html><center></center></html>");
+            p4.setText("<html><center></center></html>");
+            p5.setText("<html><center></center></html>");
+            p6.setText("<html><center></center></html>");
+            PuntosAcumuladosParciales = 0;
+            PuntosAcumulados= 0;
+        }
+        
+        /*Condicion de Salida*/
+        if (Referencia == 8){        
+            
+            Referencia = 0; 
+            Inicio ventana = new Inicio();
+            this.dispose();
+            Encuesta.setDefaultLookAndFeelDecorated(true);
+            ventana.setVisible(true);
+            ventana.setResizable(false);
+            ventana.setLocationRelativeTo(null);
+            ventana.setDefaultCloseOperation(Encuesta.DO_NOTHING_ON_CLOSE);
+            ventana.setTitle("Encuesta | Postulante");
+            Image icono;
+            icono = Toolkit.getDefaultToolkit().getImage("src/Imagenes/rol.png");
+            ventana.setIconImage(icono);
+            ventana.getRootPane().setFont(UIManager.getFont("SystemFont"));        
+        }     
     }//GEN-LAST:event_nextActionPerformed
 
     private void pararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pararActionPerformed
         // TODO add your handling code here:
-       Inicio ventana = new Inicio();
-        //setVisible(false);
+        Inicio ventana = new Inicio();
         this.dispose();
         Encuesta.setDefaultLookAndFeelDecorated(true);
         ventana.setVisible(true);
@@ -306,7 +651,10 @@ public static int PuntosAcumulados = 0;
         Image icono;
         icono = Toolkit.getDefaultToolkit().getImage("src/Imagenes/rol.png");
         ventana.setIconImage(icono);
-        ventana.getRootPane().setFont(UIManager.getFont("SystemFont")); 
+        ventana.getRootPane().setFont(UIManager.getFont("SystemFont"));
+        PuntosAcumuladosParciales = 0;
+        PuntosAcumulados = 0;
+        Referencia = 0;
     }//GEN-LAST:event_pararActionPerformed
 
     /**
@@ -337,10 +685,8 @@ public static int PuntosAcumulados = 0;
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Encuesta().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Encuesta().setVisible(true);
         });
     }
 
@@ -351,8 +697,13 @@ public static int PuntosAcumulados = 0;
     private javax.swing.JComboBox Pregunta4;
     private javax.swing.JComboBox Pregunta5;
     private javax.swing.JComboBox Pregunta6;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel cancelar;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
     private javax.swing.JButton next;
     private javax.swing.JLabel p1;
     private javax.swing.JLabel p2;
