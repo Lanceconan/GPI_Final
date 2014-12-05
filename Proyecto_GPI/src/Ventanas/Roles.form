@@ -27,7 +27,6 @@
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="jPanel2" max="32767" attributes="0"/>
-                  <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel6" min="-2" pref="284" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
@@ -41,6 +40,10 @@
                               <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -84,33 +87,18 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="rol" min="-2" pref="289" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-              </Group>
-              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="nivel" min="-2" pref="289" max="-2" attributes="0"/>
-                      <EmptySpace pref="353" max="32767" attributes="0"/>
-                  </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="rol" pref="368" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="rol" min="-2" pref="38" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="nivel" min="-2" pref="38" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -119,38 +107,39 @@
         <Component class="javax.swing.JComboBox" name="rol">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="18" style="1"/>
+              <Font name="Trebuchet MS" size="18" style="1"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="6">
-                <StringItem index="0" value="Gerente Fiscal&#xed;a"/>
-                <StringItem index="1" value="Gerente de Marketing"/>
-                <StringItem index="2" value="Gerente de RRHH"/>
-                <StringItem index="3" value="Gerente de operaciones"/>
-                <StringItem index="4" value="Gerente de finanzas"/>
-                <StringItem index="5" value="Gerente general"/>
+              <StringArray count="19">
+                <StringItem index="0" value="Seleccione Rol ..."/>
+                <StringItem index="1" value="Auxiliar de aseo"/>
+                <StringItem index="2" value="Reponedor"/>
+                <StringItem index="3" value="Guardia"/>
+                <StringItem index="4" value="Operador de m&#xe1;quinas"/>
+                <StringItem index="5" value="Secretaria"/>
+                <StringItem index="6" value="Vendedor"/>
+                <StringItem index="7" value="Encargado de seguridad"/>
+                <StringItem index="8" value="Encargado de m&#xe1;quinas"/>
+                <StringItem index="9" value="Encargado de personal"/>
+                <StringItem index="10" value="Coordinador"/>
+                <StringItem index="11" value="Encargado de local"/>
+                <StringItem index="12" value="Auditoria"/>
+                <StringItem index="13" value="Gerente Fiscal&#xed;a"/>
+                <StringItem index="14" value="Gerente de Marketing"/>
+                <StringItem index="15" value="Gerente de RRHH"/>
+                <StringItem index="16" value="Gerente de operaciones"/>
+                <StringItem index="17" value="Gerente de finanzas"/>
+                <StringItem index="18" value="Gerente general"/>
               </StringArray>
             </Property>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleParent" type="javax.accessibility.Accessible" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="default"/>
+            </Property>
+          </AccessibilityProperties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rolActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JComboBox" name="nivel">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="18" style="1"/>
-            </Property>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="Nivel Estrat&#xe9;gico"/>
-                <StringItem index="1" value="Nivel T&#xe1;ctico"/>
-                <StringItem index="2" value="Nivel Operacional"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nivelActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -239,10 +228,25 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="ambiente">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Trebuchet MS" size="14" style="2"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="funcion">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Trebuchet MS" size="14" style="2"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="bibliograficos">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Trebuchet MS" size="14" style="2"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
@@ -277,8 +281,18 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="habilidades">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Trebuchet MS" size="14" style="2"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="competencias">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Trebuchet MS" size="14" style="2"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel11">
           <Properties>
@@ -297,6 +311,11 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="necesidades">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Trebuchet MS" size="14" style="2"/>
+            </Property>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
