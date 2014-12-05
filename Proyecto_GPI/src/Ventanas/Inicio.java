@@ -245,6 +245,9 @@ public class Inicio extends javax.swing.JFrame {
 
     private void ayudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ayudaActionPerformed
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Encuesta: A traves de 42 preguntas se determina el rol mas adecuado para el postulante"
+                + " \n\nRoles: Determina cuales son los roles o cargos que la empresa tiene a disposición "
+                + "\n\nPerfiles: Determina cuales son los atributos o caracteristicas de una postulante \n");
     }//GEN-LAST:event_ayudaActionPerformed
 
     private void rolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rolActionPerformed
@@ -265,6 +268,9 @@ public class Inicio extends javax.swing.JFrame {
 
     private void creditoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creditoActionPerformed
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Desarrollado por DLeiva - DGutiérrez"
+                + "\nGestión de Personal Informático\n2014"
+                + "\n\nVersión 2.0.3");
     }//GEN-LAST:event_creditoActionPerformed
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed

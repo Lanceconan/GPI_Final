@@ -6,9 +6,13 @@
 
 package Ventanas;
 
+import java.awt.Component;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.UIManager;
 
 /**
@@ -164,8 +168,7 @@ public static int PuntosAcumulados = 0;
             }
         });
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/competencias.jpg"))); // NOI18N
-        jLabel8.setText("jLabel8");
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/competencias.png"))); // NOI18N
 
         parar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/parar.png"))); // NOI18N
         parar.addActionListener(new java.awt.event.ActionListener() {
@@ -182,18 +185,11 @@ public static int PuntosAcumulados = 0;
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(27, 742, Short.MAX_VALUE)
-                                .addComponent(parar, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(tituloencuesta)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(cancelar)))
-                        .addGap(20, 20, 20))
+                        .addComponent(tituloencuesta)
+                        .addGap(20, 602, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.LEADING)
@@ -204,7 +200,7 @@ public static int PuntosAcumulados = 0;
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(p5, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Pregunta5, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(Pregunta5, 0, 125, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(p1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -225,62 +221,75 @@ public static int PuntosAcumulados = 0;
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(Pregunta4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(Pregunta6, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(12, 12, 12))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(16, 16, 16))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(cancelar)
+                                            .addComponent(parar, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(36, 36, 36))
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(p1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Pregunta3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(116, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(p1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Pregunta3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(tituloencuesta)
+                            .addComponent(cancelar))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(parar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(p2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Pregunta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(p3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Pregunta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(p4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Pregunta4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(p5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Pregunta5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(p6, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Pregunta6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(89, 89, 89)
+                        .addComponent(next))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(p2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Pregunta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(11, 11, 11)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(p3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Pregunta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(p4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Pregunta4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(p5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Pregunta5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(p6, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Pregunta6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(22, 22, 22))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cancelar)
-                    .addComponent(tituloencuesta))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(parar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
-                .addComponent(next)
-                .addGap(34, 34, 34))
         );
 
         pack();
@@ -322,7 +331,6 @@ public static int PuntosAcumulados = 0;
         + Integer.parseInt((String)Pregunta4.getSelectedItem())
         + Integer.parseInt((String)Pregunta5.getSelectedItem())
         + Integer.parseInt((String)Pregunta6.getSelectedItem())); 
-        System.out.println("Parcial1 Competencias" + PuntosAcumuladosParciales);
         }        
         
         Referencia++;
@@ -354,9 +362,7 @@ public static int PuntosAcumulados = 0;
             + Integer.parseInt((String)Pregunta4.getSelectedItem())
             + Integer.parseInt((String)Pregunta5.getSelectedItem())
             + Integer.parseInt((String)Pregunta6.getSelectedItem()));    
-            System.out.println("Parcial2 Competencias " + PuntosAcumuladosParciales);
             PuntosAcumulados = PuntosAcumulados + (PuntosAcumuladosParciales*3);            
-            System.out.println("Competencias "+ PuntosAcumulados);
                                             
             tituloencuesta.setText("Habilidades del Postulante");
             p1.setText("<html><center>1. ¿Qué tanto aporte siente usted que realiza <br> en un equipo de trabajo?</center></html>");
@@ -383,7 +389,6 @@ public static int PuntosAcumulados = 0;
             + Integer.parseInt((String)Pregunta4.getSelectedItem())
             + Integer.parseInt((String)Pregunta5.getSelectedItem())
             + Integer.parseInt((String)Pregunta6.getSelectedItem()));
-            System.out.println("Parcial Habilidad "+ PuntosAcumuladosParciales);
             
             tituloencuesta.setText("Habilidades del Postulante");
             p1.setText("<html><center>7. ¿Qué tan hábil se considera para lograr escalar <br> en la empresa?</center></html>");
@@ -411,11 +416,9 @@ public static int PuntosAcumulados = 0;
             + Integer.parseInt((String)Pregunta4.getSelectedItem())
             + Integer.parseInt((String)Pregunta5.getSelectedItem())
             + Integer.parseInt((String)Pregunta6.getSelectedItem()));
-            System.out.println("Parcial2 habilidad "+ PuntosAcumuladosParciales);
             PuntosAcumulados = PuntosAcumulados + (PuntosAcumuladosParciales*2);
             
             PuntosAcumuladosParciales = 0;
-            System.out.println("Competencias + Habilidades " + PuntosAcumulados);
                         
             tituloencuesta.setText("Necesidades del Postulante");
             p1.setText("<html><center>1. ¿Qué tan deseoso esta por trabajar acá?</center></html>");
@@ -443,7 +446,6 @@ public static int PuntosAcumulados = 0;
             + Integer.parseInt((String)Pregunta4.getSelectedItem())
             + Integer.parseInt((String)Pregunta5.getSelectedItem())
             + Integer.parseInt((String)Pregunta6.getSelectedItem()));
-            System.out.println("Parcial Necesidades 1 "+ PuntosAcumuladosParciales);
             
             tituloencuesta.setText("Necesidades del Postulante");
             p1.setText("<html><center>7. ¿Qué nivel de importancia tiene para usted el dinero?</center></html>");
@@ -471,10 +473,7 @@ public static int PuntosAcumulados = 0;
             + Integer.parseInt((String)Pregunta4.getSelectedItem())
             + Integer.parseInt((String)Pregunta5.getSelectedItem())
             + Integer.parseInt((String)Pregunta6.getSelectedItem()));           
-            System.out.println("Parcial Necesidades 2 "+ PuntosAcumuladosParciales);
             PuntosAcumulados = PuntosAcumulados + (PuntosAcumuladosParciales*3);
-            
-            System.out.println("Competencias + Habilidades + Necesidades "+ PuntosAcumulados);
             
             tituloencuesta.setText("Bibliograficas, Ambientales y Perfil del Postulante");
             p1.setText("<html><center>1. ¿Qué importancia le da usted a la vida en pareja?</center></html>");
@@ -489,128 +488,122 @@ public static int PuntosAcumulados = 0;
             Pregunta4.setSelectedIndex(0);
             Pregunta5.setSelectedIndex(0);
             Pregunta6.setSelectedIndex(0);
-            next.setText("Ver Resultados");
-            next.setIcon(null);
-            parar.setVisible(false);
-            cancelar.setVisible(false);
-            jLabel8.setVisible(false);
+            ImageIcon icono = new ImageIcon("src/Imagenes/resultado.png");
+            next.setIcon(icono);            
+            next.setText("Ver Resultados"); 
         }
         /*Condicion de Resultado*/
         if (Referencia == 7){             
+            
+            parar.setVisible(false);
+            cancelar.setVisible(false);
+            jLabel8.setVisible(false);
             
             PuntosAcumuladosParciales = 0;
             PuntosAcumuladosParciales = PuntosAcumuladosParciales 
             + ((Integer.parseInt((String)Pregunta1.getSelectedItem()) + Integer.parseInt((String)Pregunta2.getSelectedItem())) * 1)
             + ((Integer.parseInt((String)Pregunta3.getSelectedItem()) + Integer.parseInt((String)Pregunta4.getSelectedItem())) * 2)
             + ((Integer.parseInt((String)Pregunta5.getSelectedItem()) + Integer.parseInt((String)Pregunta6.getSelectedItem())) * 3);           
-            System.out.println("Parcial perfil biblio ambiente "+ PuntosAcumuladosParciales);
-            
+                        
             PuntosAcumulados = PuntosAcumulados + PuntosAcumuladosParciales;            
-            System.out.println("Puntaje Final "+ PuntosAcumulados);
             
             /*Seccion de Seleccion de Rol*/
-            tituloencuesta.setText("Resultados de la Encuesta");
+            tituloencuesta.setText("!!Resultados de la Encuesta!!");
             Pregunta1.setVisible(false);
             Pregunta2.setVisible(false);
             Pregunta3.setVisible(false);
             Pregunta4.setVisible(false);
             Pregunta5.setVisible(false);
             Pregunta6.setVisible(false);
+            p3.setVisible(false);           
+            jSeparator3.setVisible(false);
+            jSeparator4.setVisible(false);
+            jSeparator5.setVisible(false);
             next.setText("Volver al Menú");       
             
-            if(PuntosAcumulados >= 108 && PuntosAcumulados <= 215){
-                System.out.println("Auxiliar de Aseo ");
+            ImageIcon icono = new ImageIcon("src/Imagenes/menu.png");
+            next.setIcon(icono);
+            p1.setFont( new Font( "Verdana",Font.BOLD,14 ) );
+            p2.setFont( new Font( "Trebuchet",Font.PLAIN,16 ) );
+            String numCadena= String.valueOf(PuntosAcumulados);
+            String Cadena = "<html><center>¡¡Felicitaciones!! <br> El puntaje obtenido fue: " + numCadena + "</center></html>" ;
+            p1.setText(Cadena);
+ 
+            if(PuntosAcumulados >= 108 && PuntosAcumulados <= 215){               
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Auxiliar de Aseo </b></center></html>");
             }
             
             else if(PuntosAcumulados >= 216 && PuntosAcumulados <= 323){
-                System.out.println("Reponedor ");
-            
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Reponedor </b></center></html>");
             }
             
             else if(PuntosAcumulados >= 324 && PuntosAcumulados <= 431){
-                System.out.println("Guardia ");
-            
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Guardia </b></center></html>");
             }
             
             else if(PuntosAcumulados >= 432 && PuntosAcumulados <= 539){
-                System.out.println("Operador de Maquinas ");
-            
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Operador de Maquinas </b></center></html>");
             }
             
             else if(PuntosAcumulados >= 540 && PuntosAcumulados <= 647){
-                System.out.println("Secretaria ");
-            
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Secretaria </b></center></html>");
             }
             
             else if(PuntosAcumulados >= 648 && PuntosAcumulados <= 755){
-                System.out.println("Vendedor ");
-            
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Vendedor </b></center></html>");
             }
             
             else if(PuntosAcumulados >= 756 && PuntosAcumulados <= 791){
-                System.out.println("Encargado de Seguridad ");
-            
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Encargado de Seguridad </b></center></html>");
             }
             
             else if(PuntosAcumulados >= 792 && PuntosAcumulados <= 827){
-                System.out.println("Encargado de Maquinas ");
-            
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Encargado de Maquinas </b></center></html>");
             }
             
             else if(PuntosAcumulados >= 828 && PuntosAcumulados <= 863){
-                System.out.println("Encargado de Personal ");
-            
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Encargado de Personal </b></center></html>"); 
             }
             
             else if(PuntosAcumulados >= 864 && PuntosAcumulados <= 899){
-                System.out.println("Coordinador ");
-            
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Coordinador </b></center></html>");
             }
             
             else if(PuntosAcumulados >= 900 && PuntosAcumulados <= 935){
-                System.out.println("Encargado de Local ");
-            
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Encargado de Local </b></center></html>");
             }
             
             else if(PuntosAcumulados >= 936 && PuntosAcumulados <= 971){
-                System.out.println("Auditoria ");
-            
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Auditoria </b></center></html>"); 
             }
             
             else if(PuntosAcumulados >= 972 && PuntosAcumulados <= 989){
-                System.out.println("Gerente de Fiscalia ");
-            
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Gerente de Fiscalia </b></center></html>");
             }
             
             else if(PuntosAcumulados >= 990 && PuntosAcumulados <= 1007){
-                System.out.println("Gerente de Marketing ");
-            
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Gerente de Marketing </b></center></html>");
             }
             
             else if(PuntosAcumulados >= 1008 && PuntosAcumulados <= 1025){
-                System.out.println("Gerente de RRHH ");
-            
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Gerente de RRHH </b></center></html>");
             }
             
             else if(PuntosAcumulados >= 1026 && PuntosAcumulados <= 1043){
-                System.out.println("Gerente de Operaciones ");
-            
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Gerente de Operaciones </b></center></html>");
             }
             
             else if(PuntosAcumulados >= 1044 && PuntosAcumulados <= 1061){
-                System.out.println("Gerente de Finanzas ");
-            
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Gerente de Finanzas </b></center></html>"); 
             }
             
              else if(PuntosAcumulados >= 1062 && PuntosAcumulados <= 1080){
-                System.out.println("Gerente General ");
-            
+                p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Gerente General </b></center></html>");
             }
             
             /*FIN Seccion de Seleccion de Rol*/ 
             
-            p1.setText("<html><center></center></html>");
-            p2.setText("<html><center></center></html>");
+            
             p3.setText("<html><center></center></html>");
             p4.setText("<html><center></center></html>");
             p5.setText("<html><center></center></html>");

@@ -8,6 +8,7 @@ package Ventanas;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.event.ItemEvent;
 import javax.swing.UIManager;
 
 /**
@@ -57,10 +58,15 @@ public class Roles extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Roles", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Trebuchet MS", 1, 16))); // NOI18N
 
         rol.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        rol.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccione Rol" }));
+        rol.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Gerente Fiscalía", "Gerente de Marketing", "Gerente de RRHH", "Gerente de operaciones", "Gerente de finanzas", "Gerente general" }));
+        rol.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rolActionPerformed(evt);
+            }
+        });
 
         nivel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        nivel.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccione Nivel", "Nivel Estratégico", "Nivel Táctico", "Nivel Operacional" }));
+        nivel.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nivel Estratégico", "Nivel Táctico", "Nivel Operacional" }));
         nivel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nivelActionPerformed(evt);
@@ -226,6 +232,20 @@ public class Roles extends javax.swing.JFrame {
 
     private void nivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivelActionPerformed
         // TODO add your handling code here:
+        String niveles = (String) nivel.getSelectedItem();
+        
+        if(niveles.equals("Nivel Estratégico")){ 
+            System.out.println("eee");
+            //rol.setSelectedIndex(0);
+            
+        }
+        else if(niveles.equals("Nivel Táctico")){ 
+            System.out.println("ttt");
+        }
+        else if(niveles.equals("Nivel Operacional")){ 
+            System.out.println("ooo");
+        }
+        
     }//GEN-LAST:event_nivelActionPerformed
 
     private void menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuActionPerformed
@@ -244,6 +264,14 @@ public class Roles extends javax.swing.JFrame {
         ventana.getRootPane().setFont(UIManager.getFont("SystemFont"));
     }//GEN-LAST:event_menuActionPerformed
 
+    private void rolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rolActionPerformed
+        // TODO add your handling code here:
+        String roles = (String) rol.getSelectedItem();
+        
+        
+    }//GEN-LAST:event_rolActionPerformed
+
+      
     /**
      * @param args the command line arguments
      */

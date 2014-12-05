@@ -122,11 +122,19 @@
               <Font name="Tahoma" size="18" style="1"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="1">
-                <StringItem index="0" value="Seleccione Rol"/>
+              <StringArray count="6">
+                <StringItem index="0" value="Gerente Fiscal&#xed;a"/>
+                <StringItem index="1" value="Gerente de Marketing"/>
+                <StringItem index="2" value="Gerente de RRHH"/>
+                <StringItem index="3" value="Gerente de operaciones"/>
+                <StringItem index="4" value="Gerente de finanzas"/>
+                <StringItem index="5" value="Gerente general"/>
               </StringArray>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rolActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JComboBox" name="nivel">
           <Properties>
@@ -134,11 +142,10 @@
               <Font name="Tahoma" size="18" style="1"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Seleccione Nivel"/>
-                <StringItem index="1" value="Nivel Estrat&#xe9;gico"/>
-                <StringItem index="2" value="Nivel T&#xe1;ctico"/>
-                <StringItem index="3" value="Nivel Operacional"/>
+              <StringArray count="3">
+                <StringItem index="0" value="Nivel Estrat&#xe9;gico"/>
+                <StringItem index="1" value="Nivel T&#xe1;ctico"/>
+                <StringItem index="2" value="Nivel Operacional"/>
               </StringArray>
             </Property>
           </Properties>

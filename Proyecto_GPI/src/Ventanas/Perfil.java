@@ -19,6 +19,8 @@ public class Perfil extends javax.swing.JFrame {
     /**
      * Creates new form Perfil
      */
+    public static int Referencia = 0;
+    
     public Perfil() {
         initComponents();
     }
@@ -35,7 +37,7 @@ public class Perfil extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         menu = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        tipo = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         segundo = new javax.swing.JLabel();
         primer = new javax.swing.JLabel();
@@ -60,30 +62,43 @@ public class Perfil extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 11)); // NOI18N
         jLabel1.setText("Volver al Menu Principal");
 
-        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        jLabel2.setText("Necesidades");
+        tipo.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        tipo.setText("Necesidades");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Descripción", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Trebuchet MS", 1, 16))); // NOI18N
 
-        segundo.setText("jLabel3");
+        segundo.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
+        segundo.setText("2. Orden superior: Sociales, de estima y de autorrealización.");
+        segundo.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
 
-        primer.setText("jLabel3");
+        primer.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
+        primer.setText("<html><center>1. De orden inferior: Fisiológicas y de Seguridad.</center></html>");
+        primer.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
 
-        quinta.setText("jLabel3");
+        quinta.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
+        quinta.setText("5. Poder: Lograr que otros hagan lo que no harían según sus patrones conductuales. Lograr influir.");
+        quinta.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
 
-        tercer.setText("jLabel3");
+        tercer.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
+        tercer.setText("3. Factores intrínsecos: Realización, reconocimiento, progreso y desarrollo.");
+        tercer.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
 
-        cuarta.setText("jLabel3");
+        cuarta.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
+        cuarta.setText("4. Factores extrínsecos: Políticas de empresa, la administración, relaciones interpersonales, condiciones de trabajo y sueldo.");
+        cuarta.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(segundo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(primer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(quinta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(tercer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(cuarta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(quinta, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cuarta, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
+                    .addComponent(tercer, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(segundo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(primer))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,12 +111,18 @@ public class Perfil extends javax.swing.JFrame {
                 .addComponent(tercer, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cuarta, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
-                .addComponent(quinta, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(quinta, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         siguiente.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         siguiente.setText("Competencias >>");
+        siguiente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                siguienteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -113,24 +134,20 @@ public class Perfil extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(tipo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(menu)
-                                .addGap(12, 12, 12))
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(34, 34, 34))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jSeparator1)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(645, Short.MAX_VALUE)
-                .addComponent(siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(menu))))
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,14 +161,14 @@ public class Perfil extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
-                .addComponent(siguiente, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         pack();
@@ -172,6 +189,65 @@ public class Perfil extends javax.swing.JFrame {
         ventana.setIconImage(icono);
         ventana.getRootPane().setFont(UIManager.getFont("SystemFont"));
     }//GEN-LAST:event_menuActionPerformed
+
+    private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
+        // TODO add your handling code here:
+        Referencia++;
+        
+        if (Referencia == 1){
+        siguiente.setText("Habilidades >>");
+        tipo.setText("Competencias");
+        primer.setText("<html><center>1. Básicas; lectura, comprensión de textos, relaciones matemáticas.</center></html>");
+        segundo.setText("<html><center>2. Técnicas; manejo de tecnologías específicas.</center></html>");
+        tercer.setText("<html><center>3. De Comportamiento; obediencia, compromiso, trabajar en equipo, adaptabilidad, escuchar, observar, comunicarse oralmente.</center></html>");
+        cuarta.setText("<html><center>4. Intelectuales; análisis, síntesis, conclusión, pronósticos, concentración.</center></html>");
+        quinta.setText("<html><center>5. Orden y Seguridad; motricidad, seguir prescripciones para hacer una rutina de trabajo.</center></html>");
+        }
+        
+        else if (Referencia == 2){
+        tipo.setText("Habilidades");
+        siguiente.setText("Habilidades >>");
+        primer.setText("<html><center>1. Analítico; Desglosa los componentes del fenómeno en estudio, ve: estructuras, patrones y formatos. </center></html>");
+        segundo.setText("<html><center>2. Armónico; Trabaja por acuerdos comunes, evita las confrontaciones, no impone sus opiniones. </center></html>");
+        tercer.setText("<html><center>3. Competitivo; Está pendiente del desempeño de los demás, le gustan las mediciones. </center></html>");
+        cuarta.setText("<html><center>4. Comunicador; Le gusta: explicar, describir, ser anfitrión; busca palabras que generen mayor impacto. </center></html>");
+        quinta.setText("<html><center>5. Conector; Supone que  todo ocurre por alguna razón, cree que la conducta de unos afecta a otros, respeta la diversidad. </center></html>");
+        }
+        
+        else if (Referencia == 3){
+        tipo.setText("Habilidades");
+        siguiente.setText("Habilidades >>");
+        primer.setText("<html><center>6. Desarrollador; Ve potencial en los demás, estimula a los otros hacia nuevos desafíos. </center></html>");
+        segundo.setText("<html><center>7. Disciplinado; Necesita un mundo: predecible, ordenado y planeado; es preciso y meticuloso en todas sus acciones; le disgustan las sorpresas. </center></html>");
+        tercer.setText("<html><center>8. Empático; Siente las emociones de quienes lo rodean; ayuda a los otros a expresar sus sentimientos y emociones. </center></html>");
+        cuarta.setText("<html><center>9. Emprendedor; Necesita lograr algo tangible; tiene un hálito de descontento. </center></html>");
+        quinta.setText("<html><center>10. Flexible; Vive el momento; descubre su futuro en cada opción que se le presenta a diario; gusta de las sorpresas. </center></html>");
+        }
+        
+        else if (Referencia == 4){
+        tipo.setText("Habilidades");
+        siguiente.setText("Necesidades >>");
+        primer.setText("<html><center>11. Futurista; Disfruta evocando visiones del futuro; declara: “no sería genial si ......”. </center></html>");
+        segundo.setText("<html><center>12. Mandatario; Le gusta imponer sus  opiniones; al fijar una meta no descansa hasta comprometer a todos; usa el enfrentamiento para llegar al acuerdo; se hace cargo de las cosas. </center></html>");
+        tercer.setText("<html><center>13. Responsable; Asume sus compromisos; no cesa en cumplir su palabra; si no puede cumplir idea compensaciones; asocia compromiso con reputación. </center></html>");
+        cuarta.setVisible(false);
+        quinta.setVisible(false);
+        }
+        
+        else if (Referencia == 5){
+        cuarta.setVisible(true);
+        quinta.setVisible(true);
+        tipo.setText("Necesidades");
+        siguiente.setText("Competencias >>");
+        primer.setText("<html><center>1. De orden inferior: Fisiológicas y de Seguridad..</center></html>");
+        segundo.setText("<html><center>2. Orden superior: Sociales, de estima y de autorrealización.</center></html>");
+        tercer.setText("<html><center>3. Factores intrínsecos: Realización, reconocimiento, progreso y desarrollo.</center></html>");
+        cuarta.setText("<html><center>4. Factores extrínsecos: Políticas de empresa, la administración, relaciones interpersonales, condiciones de trabajo y sueldo.</center></html>");
+        quinta.setText("<html><center>5. Poder: Lograr que otros hagan lo que no harían según sus patrones conductuales. Lograr influir. </center></html>");
+        Referencia=0;
+        }
+        
+    }//GEN-LAST:event_siguienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -211,7 +287,6 @@ public class Perfil extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel cuarta;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
@@ -221,5 +296,6 @@ public class Perfil extends javax.swing.JFrame {
     private javax.swing.JLabel segundo;
     private javax.swing.JButton siguiente;
     private javax.swing.JLabel tercer;
+    private javax.swing.JLabel tipo;
     // End of variables declaration//GEN-END:variables
 }
