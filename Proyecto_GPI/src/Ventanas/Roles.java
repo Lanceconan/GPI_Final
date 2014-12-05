@@ -51,6 +51,7 @@ public class Roles extends javax.swing.JFrame {
         necesidades = new javax.swing.JLabel();
         menu = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        nivel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -180,6 +181,8 @@ public class Roles extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 11)); // NOI18N
         jLabel1.setText("Volver al Menu Principal");
 
+        nivel.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -200,7 +203,9 @@ public class Roles extends javax.swing.JFrame {
                                 .addGap(13, 13, 13))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(56, 56, 56)
+                        .addComponent(nivel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(37, 37, 37)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -214,8 +219,13 @@ public class Roles extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(menu))
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(nivel, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -246,6 +256,7 @@ public class Roles extends javax.swing.JFrame {
         
         switch (roles) {
             case "Auxiliar de aseo":                
+                nivel.setText("Nivel Operacional");
                 funcion.setText("<html><center>Encargado de mantener limpias las instalaciones.</center></html>");
                 ambiente.setText("<html><center>Desigualdad pronunciada</center></html>");
                 bibliograficos.setText("<html><center>Carencias materiales</center></html>");
@@ -254,6 +265,7 @@ public class Roles extends javax.swing.JFrame {
                 necesidades.setText("<html><center>Predomina X</center></html>");
                 break;
             case "Reponedor":
+                nivel.setText("Nivel Operacional");
                 funcion.setText("<html><center>Se preocupa de reponer items sin stock.</center></html>");
                 ambiente.setText("<html><center>Desigualdad pronunciada</center></html>");
                 bibliograficos.setText("<html><center>Carencias materiales</center></html>");
@@ -262,6 +274,7 @@ public class Roles extends javax.swing.JFrame {
                 necesidades.setText("<html><center>Predomina X</center></html>");
                 break;
             case "Operador de máquinas":
+                nivel.setText("Nivel Operacional");
                 funcion.setText("<html><center>Maneja las máquinas para la producción.</center></html>");
                 ambiente.setText("<html><center>Desigualdad pronunciada</center></html>");
                 bibliograficos.setText("<html><center>Carencias materiales</center></html>");
@@ -270,6 +283,7 @@ public class Roles extends javax.swing.JFrame {
                 necesidades.setText("<html><center>Predominante X, Metas Generales, Factor Extrínseco Condiciones Laborales</center></html>");
                 break;
             case "Guardia":
+                nivel.setText("Nivel Operacional");
                 funcion.setText("<html><center>Se preocupa de mantener el orden en las instalaciones, que no entren personas ajenas.</center></html>");
                 ambiente.setText("<html><center>Desigualdad pronunciada</center></html>");
                 bibliograficos.setText("<html><center>Carencias materiales</center></html>");
@@ -278,6 +292,7 @@ public class Roles extends javax.swing.JFrame {
                 necesidades.setText("<html><center>Orden inferior</center></html>");
                 break;
             case "Secretaria":
+                nivel.setText("Nivel Operacional");
                 funcion.setText("<html><center>Recibe y envía mensajes de su jefe</center></html>");
                 ambiente.setText("<html><center>Desigualdad pronunciada</center></html>");
                 bibliograficos.setText("<html><center>Carencias materiales</center></html>");
@@ -286,6 +301,7 @@ public class Roles extends javax.swing.JFrame {
                 necesidades.setText("<html><center>Predominante X, Metas Eficacia Personal, Factor extrínseco, Condiciones de trabajo</center></html>");
                 break;
             case "Vendedor":
+                nivel.setText("Nivel Operacional");
                 funcion.setText("<html><center>Encargado de realizar ventas</center></html>");
                 ambiente.setText("<html><center>Competitividad agresiva y desleal</center></html>");
                 bibliograficos.setText("<html><center>Carencias materiales</center></html>");
@@ -293,7 +309,8 @@ public class Roles extends javax.swing.JFrame {
                 competencias.setText("<html><center>De comportamiento</center></html>");
                 necesidades.setText("<html><center>Predominante X, Realización, Factor Extrínseco, Sueldo</center></html>");
                 break;  
-            case "Encargado de seguridad":                
+            case "Encargado de seguridad": 
+                nivel.setText("Nivel Táctico");
                 funcion.setText("<html><center>Ente mayor respecto a la seguridad de la empresa</center></html>");
                 ambiente.setText("<html><center>Competitividad, agresiva y desleal.</center></html>");
                 bibliograficos.setText("<html><center>Carencias materiales</center></html>");
@@ -302,6 +319,7 @@ public class Roles extends javax.swing.JFrame {
                 necesidades.setText("<html><center>Tipo Y, factores intrínsecos</center></html>");
                 break;
             case "Encargado de máquinas":
+                nivel.setText("Nivel Táctico");
                 funcion.setText("<html><center>Relacionado a la mantención, distribución, etc.</center></html>");
                 ambiente.setText("<html><center>Competitividad, agresiva y desleal.</center></html>");
                 bibliograficos.setText("<html><center>Carencias materiales</center></html>");
@@ -310,6 +328,7 @@ public class Roles extends javax.swing.JFrame {
                 necesidades.setText("<html><center>Predomina Y</center></html>");
                 break;
             case "Encargado de personal":
+                nivel.setText("Nivel Táctico");
                 funcion.setText("<html><center>Se preocupa de la supervisión de los trabajadores</center></html>");
                 ambiente.setText("<html><center>: Factores extrínsecos</center></html>");
                 bibliograficos.setText("<html><center>Carencias materiales</center></html>");
@@ -318,6 +337,7 @@ public class Roles extends javax.swing.JFrame {
                 necesidades.setText("<html><center>Predomina Y, Factores extrínsecos.</center></html>");
                 break;
             case "Coordinador":
+                nivel.setText("Nivel Táctico");
                 funcion.setText("<html><center>Se encarga de mejorar la producción, coordinando diferentes áreas de la empresa para ello.</center></html>");
                 ambiente.setText("<html><center>Estabilidad social</center></html>");
                 bibliograficos.setText("<html><center>Carencias materiales</center></html>");
@@ -326,6 +346,7 @@ public class Roles extends javax.swing.JFrame {
                 necesidades.setText("<html><center>Predomina Y</center></html>");
                 break;
             case "Encargado de local":
+                nivel.setText("Nivel Táctico");
                 funcion.setText("<html><center>Es el responsable de todo lo que pase en el local de la empresa.</center></html>");
                 ambiente.setText("<html><center>Competitividad agresiva y desleal, estabilidad social</center></html>");
                 bibliograficos.setText("<html><center>Sin carencias</center></html>");
@@ -334,6 +355,7 @@ public class Roles extends javax.swing.JFrame {
                 necesidades.setText("<html><center>Factores extrínsecos, tipo Y/T, orden superior</center></html>");
                 break;
             case "Auditoria":
+                nivel.setText("Nivel Táctico");
                 funcion.setText("<html><center>Se preocupa de velar por el buen funcionamiento de la empresa</center></html>");
                 ambiente.setText("<html><center>Estabilidad social</center></html>");
                 bibliograficos.setText("<html><center>Sin carencias</center></html>");
@@ -341,7 +363,8 @@ public class Roles extends javax.swing.JFrame {
                 competencias.setText("<html><center>Intelectual</center></html>");
                 necesidades.setText("<html><center>Orden superior, factores intrínsecos, realización, tipo Y/T</center></html>");
                 break;
-            case "Gerente Fiscalía":                
+            case "Gerente Fiscalía":   
+                nivel.setText("Nivel Estratégico");
                 funcion.setText("<html><center>Se preocupa de toda el área legal de la empresa, que leyes la rigen, procesos jurídicos, etc.</center></html>");
                 ambiente.setText("<html><center>Estabilidad social</center></html>");
                 bibliograficos.setText("<html><center>Sin carencias</center></html>");
@@ -350,6 +373,7 @@ public class Roles extends javax.swing.JFrame {
                 necesidades.setText("<html><center>Predomina Y,  políticas de la empresa(factor extrínseco),realización.</center></html>");
                 break;
             case "Gerente de RRHH":
+                nivel.setText("Nivel Estratégico");
                 funcion.setText("<html><center>Encargado de ver que perfiles son necesarios en cada cargo, planes de reclutamientos, etc.</center></html>");
                 ambiente.setText("<html><center>Estabilidad social</center></html>");
                 bibliograficos.setText("<html><center>Sin carencias</center></html>");
@@ -358,6 +382,7 @@ public class Roles extends javax.swing.JFrame {
                 necesidades.setText("<html><center>Predomina Y</center></html>");
                 break;
             case "Gerente de Marketing":
+                nivel.setText("Nivel Estratégico");
                 funcion.setText("<html><center>Se encarga de Desarrollo de plan anual de Mercadotecnia, Estudios de Mercado, Imagen Corporativa,etc</center></html>");
                 ambiente.setText("<html><center>Estabilidad social</center></html>");
                 bibliograficos.setText("<html><center>Sin carencias</center></html>");
@@ -366,6 +391,7 @@ public class Roles extends javax.swing.JFrame {
                 necesidades.setText("<html><center>Predomina Y</center></html>");
                 break;
             case "Gerente de operaciones":
+                nivel.setText("Nivel Estratégico");
                 funcion.setText("<html><center>Encargado mayor del área de producción de la empresa, se preocupa de ver materias primas a menor costo, mejores máquinas, etc.</center></html>");
                 ambiente.setText("<html><center>Estabilidad social</center></html>");
                 bibliograficos.setText("<html><center>Sin carencias</center></html>");
@@ -374,6 +400,7 @@ public class Roles extends javax.swing.JFrame {
                 necesidades.setText("<html><center>Predomina Y</center></html>");
                 break;
             case "Gerente de finanzas":
+                nivel.setText("Nivel Estratégico");
                 funcion.setText("<html><center>: Encargado de los dineros entrantes y salientes de la empresa, opciones de inversión, etc.</center></html>");
                 ambiente.setText("<html><center>Estabilidad social</center></html>");
                 bibliograficos.setText("<html><center>Sin carencias</center></html>");
@@ -382,6 +409,7 @@ public class Roles extends javax.swing.JFrame {
                 necesidades.setText("<html><center>Predomina Y</center></html>");
                 break;
             case "Gerente general":
+                nivel.setText("Nivel Estratégico");
                 funcion.setText("<html><center>Jefe de todos los gerentes, éstos le rinden cuentas, siendo decisivo en la toma de decisiones en todas las áreas de la empresa.</center></html>");
                 ambiente.setText("<html><center>Estabilidad social</center></html>");
                 bibliograficos.setText("<html><center>Sin carencias</center></html>");
@@ -390,6 +418,7 @@ public class Roles extends javax.swing.JFrame {
                 necesidades.setText("<html><center>Predomina Y</center></html>");
                 break;
             default:
+                nivel.setText("");
                 funcion.setText("<html><center></center></html>");
                 ambiente.setText("<html><center></center></html>");
                 bibliograficos.setText("<html><center></center></html>");
@@ -454,6 +483,7 @@ public class Roles extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton menu;
     private javax.swing.JLabel necesidades;
+    private javax.swing.JLabel nivel;
     private javax.swing.JComboBox rol;
     // End of variables declaration//GEN-END:variables
 }

@@ -515,7 +515,7 @@ public static int PuntosAcumulados = 0;
             Pregunta4.setVisible(false);
             Pregunta5.setVisible(false);
             Pregunta6.setVisible(false);
-            p3.setVisible(false);           
+            //p3.setVisible(false);           
             jSeparator3.setVisible(false);
             jSeparator4.setVisible(false);
             jSeparator5.setVisible(false);
@@ -528,7 +528,14 @@ public static int PuntosAcumulados = 0;
             String numCadena= String.valueOf(PuntosAcumulados);
             String Cadena = "<html><center>¡¡Felicitaciones!! <br> El puntaje obtenido fue: " + numCadena + "</center></html>" ;
             p1.setText(Cadena);
- 
+            
+            if(PuntosAcumulados >= 108 && PuntosAcumulados <= 755) numCadena = "Nivel Operacional";          
+            else if (PuntosAcumulados >= 756 && PuntosAcumulados <=971) numCadena = "Nivel Táctico";
+            else if (PuntosAcumulados >= 972 && PuntosAcumulados <=1080) numCadena = "Nivel Estratégico";
+            
+            p3.setFont( new Font( "Trebuchet",Font.PLAIN,18 ) );
+            p3.setText("<html><center>El nivel organizacional corresponde Al:<b> " + numCadena + "</b></center></html>");
+            
             if(PuntosAcumulados >= 108 && PuntosAcumulados <= 215){               
                 p2.setText("<html><center>El cargo o Rol óptimo que puede el postulante <br> desarrollar en la empresa, basado en sus Competencias, <br> Necesidades Habilidades y otros críterios es <b>Auxiliar de Aseo </b></center></html>");
             }
@@ -604,7 +611,7 @@ public static int PuntosAcumulados = 0;
             /*FIN Seccion de Seleccion de Rol*/ 
             
             
-            p3.setText("<html><center></center></html>");
+            //p3.setText("<html><center></center></html>");
             p4.setText("<html><center></center></html>");
             p5.setText("<html><center></center></html>");
             p6.setText("<html><center></center></html>");
